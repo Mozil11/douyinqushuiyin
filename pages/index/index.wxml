@@ -1,0 +1,57 @@
+<view class="wrap">
+  <view class="platforms">
+    <text class="platforms-title">去水印助手支持以下平台,部分平台不支持直接保存到相册</text>
+    <view class="page-body">
+      <view class="page-section page-section-spacing swiper">
+        <swiper autoplay="{{true}}" interval="{{3000}}" circular="{{true}}" indicator-dots="{{true}}" indicator-active-color="#f54d75" indicator-color="rgba(255,255,255,.1)">
+          <block
+            wx:for="{{items}}"
+            >
+            <swiper-item>
+            <view class="swiper-item">
+              <view class="platforms-item">
+                <image src="{{item.url}}"></image>
+                <text>{{item.name}}</text>
+              </view>
+             
+            </view>
+         
+          </swiper-item>
+          </block>
+          
+        </swiper>
+      </view>
+    </view>
+  </view>
+  <view class="watermark">
+    <view class="watermark-input">
+      <input bindinput="mousuosuo_input" id="inputText" placeholder=" 请复制视频链接，粘贴到这里" type="text" value="{{defaultUrl}}"></input>
+      <button bindtap="mousuosuo_clear" id="clearInputText">
+        <image src="../../images/icon-clear.png" wx:if="{{videoUrl==''}}"></image>
+        <image src="../../images/icon-clear-active.png" wx:else></image>
+      </button>
+    </view>
+    <button bindgetuserinfo="getUserInfo" class="parsing" hoverClass="parsing-btn-hover" openType="getUserInfo">一键去除水印</button>
+    <p class="exp">例：http://v.douyin.com/aWcudQ/</p>
+    <view class="faq">
+      <view class="faq-header">
+        <text class="faq-header-title">常见问题</text>
+      </view>
+      <view class="faq-content">
+        <view bindtap="mousuosuo_showSvPro" class="faq-content-list" data-index="0">
+          <text>使用方法</text>
+          <image src="../../images/icon-more.png"></image>
+        </view>
+        <view bindtap="mousuosuo_showSvPro" class="faq-content-list" data-index="1">
+          <text>为什么视频成功解析了还有水印？</text>
+          <image src="../../images/icon-more.png"></image>
+        </view>
+        <view bindtap="mousuosuo_showSvPro" class="faq-content-list" data-index="2">
+          <text>为什么无法下载视频？</text>
+          <image src="../../images/icon-more.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="center"></view>
+  </view>
+</view>
