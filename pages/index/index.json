@@ -1,6 +1,6 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "去水印",
-  "navigationBarBackgroundColor": "black",
-  "navigationBarTextStyle": "black"
+  "navigationBarBackgroundColor": "#100100",
+  "navigationBarTextStyle": "white"
 }

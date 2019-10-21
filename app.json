@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/games/index/index",
+    "pages/games/2048/2048"
     
   ],
   "window": {
@@ -9,6 +11,25 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+
+    "list":[{
+      "text": "",
+      "pagePath": "pages/index/index",
+      "iconPath": "static/ic_menu_choice_nor.png",
+      "selectedIconPath":"static/ic_menu_choice_pressed.png"
+      
+    },{
+      "text": "",
+      "pagePath": "pages/games/index/index",
+      "iconPath": "static/ic_menu_sort_nor.png",
+      "selectedIconPath": "static/ic_menu_sort_pressed.png"
+    }]
   },
   "navigateToMiniProgramAppIdList": [
     "wx5d0e03760bbb33bb"
